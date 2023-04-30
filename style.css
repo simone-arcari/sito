@@ -36,9 +36,14 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 
+#text {
+    margin: 0;
+}
+
 .prova {
     text-align: center;
     font-size: 25px;
+    padding: 30px;
 }
 
 .social-media {
