@@ -18,12 +18,13 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 999;
 }
 
 footer {
     background-color: #1F1B24;
     height: 50px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
