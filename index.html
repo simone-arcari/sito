@@ -12,7 +12,7 @@
 <body>
 
     <header>
-        <h1 id="text">Starting...</h1>
+        <h1 id="text"></h1>
     </header>
 
     <div class="prova">
@@ -20,7 +20,7 @@
         <br>
         <p>Hi everybody, my name is Simone, I'm an engineer and I'm developing my personal website :)</p>
     </div>
-  
+
 
 
     <div class="social-media">
@@ -49,30 +49,59 @@
         </ul>
     </div>
 
-  
-
     <footer>
 
     </footer>
 
 
-
-
     <script>
-        const textEl = document.getElementById('text')
-        const text = 'Simone Arcari - Computer Scinece/Automation Control Engineer...'
-        let idx = 1
-        let speed = 300 / 6
+        var writeTextEvent = new Event('writeText');
 
-        writeText()
-        
+        const textEl = document.getElementById('text');
+        const text = 'Simone Arcari - Computer Scinece/Automation Control Engineer';
+        let idx = 1;
+        let speed = 300 / 6;
+
+    
+        // Esegui il codice JavaScript quando la funzione writeText() termina il suo compito
+        document.addEventListener('writeText', function () {
+            setNextElementMarginTop();
+        });
+
+        // Esegui il codice JavaScript quando la pagina è stata caricata
+        document.addEventListener('DOMContentLoaded', function () {
+            setNextElementMarginTop();
+        });
+
+        // Esegui il codice JavaScript quando la finestra del browser viene ridimensionata
+        window.addEventListener('resize', function () {
+            setNextElementMarginTop();
+        });
+
+
+        writeText();
+
+
+        // Imposta il valore del margin-top dell'elemento subito sotto l'header
+        function setNextElementMarginTop() {
+
+            // ottiene altezza effettiva header
+            var header = document.querySelector('header');
+            var headerHeight = header.offsetHeight;
+
+            // imposta il valore del margin-top di prova
+            var nextElement = document.querySelector('.prova');
+            nextElement.style.marginTop = headerHeight + 'px';
+        }
+  
+        // Scrive un po' alla volta la classe 'text'
         function writeText() {
-            textEl.innerText = text.slice(0, idx)
-            idx++
+            textEl.innerText = text.slice(0, idx);
+            idx++;
             if (idx <= text.length) {
-                setTimeout(writeText, speed)
+                setTimeout(writeText, speed);
+                document.dispatchEvent(writeTextEvent);
             }
-            
         }
     </script>
 

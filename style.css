@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    color: #BB86FC;
+    color: #FF4C29;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     background-color: #1F1B24;
@@ -18,7 +18,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 9999;
 }
 
 footer {
@@ -31,7 +31,7 @@ footer {
 }
 
 p {
-    color: #BB86FC;
+    color: white;
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -78,7 +78,7 @@ ul li a{
 
 }
 
-ul li a .icon{
+ul li a .icon {
     position: relative;
     color: #262626;
     transition: .5s;
