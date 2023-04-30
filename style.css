@@ -6,6 +6,7 @@
 body {
     margin: 0;
     padding: 0;
+    background: #262626;
 }
 
 header {
@@ -20,27 +21,16 @@ footer {
 
 p {
     color: #BB86FC;
-    /*font-family: 'Press Start 2P', cursive;*/
     font-family: 'Poppins', sans-serif;
 }
 
 .main-container {
-    background-color: white;
+    background: #262626;
     display: flex;
     margin: 0;
     padding: 0;
-}
-
-.lateral-space {
-    background: #262626;
-    width: 10%;
-}
-
-#main-space {
-    background: #262626;
-    width: 80%;
-    height: 2000px;
-    padding: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 ul {
