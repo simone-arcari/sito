@@ -12,7 +12,7 @@
 <body>
 
     <header>
-
+        <h1 id="text">Starting...</h1>
     </header>
 
     <div class="prova">
@@ -30,13 +30,13 @@
         <ul>
             <li>
                 <a href="#">
-                    <i class="fab fa-facebook-f icon"></i>
+                    <i class="fab fa-instagram icon"></i>
                 </a>
             </li>
 
             <li>
                 <a href="#">
-                    <i class="fab fa-twitter icon"></i>
+                    <i class="fab fa-github icon"></i>
                 </a>
             </li>
 
@@ -46,18 +46,35 @@
                 </a>
             </li>
 
-            <li>
-                <a href="#">
-                    <i class="fab fa-google-plus-g icon"></i>
-                </a>
-            </li>
         </ul>
     </div>
 
+  
 
     <footer>
 
     </footer>
+
+
+
+
+    <script>
+        const textEl = document.getElementById('text')
+        const text = 'Simone Arcari - Computer Scinece/Automation Control Engineer...'
+        let idx = 1
+        let speed = 300 / 6
+
+        writeText()
+        
+        function writeText() {
+            textEl.innerText = text.slice(0, idx)
+            idx++
+            if (idx <= text.length) {
+                setTimeout(writeText, speed)
+            }
+            
+        }
+    </script>
 
 </body>
 

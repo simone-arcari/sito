@@ -10,8 +10,10 @@ body {
 }
 
 header {
+    color: #BB86FC;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
     background-color: #1F1B24;
-    height: 50px;
     position: fixed;
     top: 0;
     left: 0;
@@ -104,17 +106,13 @@ ul li a:hover:before {
 }
 
 ul li:nth-child(1) a:before {
-    background: #3b5999;
+    background: #d62976;
 }
 
 ul li:nth-child(2) a:before {
-    background: #55acee;
+    background: #171515;
 }
 
 ul li:nth-child(3) a:before {
     background: #0077b5;
-}
-
-ul li:nth-child(4) a:before {
-    background: #dd4b39;
 }
