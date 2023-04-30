@@ -1,8 +1,13 @@
 var writeTextEvent = new Event('writeText');
 
 var textEl = document.getElementById('text');
-console.log(textEl);
-var text = 'Simone Arcari - Computer Scinece/Automation Control Engineer';
+var instagramEl = document.getElementById('instagram');
+var githubEl = document.getElementById('github');
+var linkedinEl = document.getElementById('linkedin');
+
+
+console.log(instagramEl);
+var text = 'Simone Arcari - Computer Scienece/Automation Control Engineer';
 var idx = 1;
 var speed = 300 / 6;
 
@@ -47,3 +52,15 @@ function writeText() {
         document.dispatchEvent(writeTextEvent);
     }
 }
+
+instagramEl.addEventListener('click', function() {
+    window.open("https://www.instagram.com/simone_arcari/", '_blank');
+})
+
+githubEl.addEventListener('click', function() {
+    window.open("https://github.com/simone-arcari", '_blank');
+})
+
+linkedinEl.addEventListener('click', function() {
+    window.open("https://www.linkedin.com/in/simone-arcari-14319b25b/", '_blank');
+})
