@@ -4,18 +4,18 @@
 <head>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
         html,
         body {
             overflow-x: hidden;
             height: 100%;
             box-sizing: border-box;
-        }
-        body {
             background: #fff;
             padding: 0;
             margin: 0;
             font-family: 'Varela Round', sans-serif;
         }
+
         .header {
             display: block;
             margin: 0 auto;
@@ -28,25 +28,28 @@
             overflow: hidden;
             z-index: 10;
         }
+
         .main {
             margin: 0 auto;
             display: block;
             height: 100%;
             margin-top: 60px;
         }
+
         .mainInner {
-            display: table;
+            display: block;
             height: 100%;
             width: 100%;
             text-align: center;
         }
+
         .mainInner div {
-            display: table-cell;
             vertical-align: middle;
             font-size: 3em;
             font-weight: bold;
             letter-spacing: 1.25px;
         }
+
         #sidebarMenu {
             height: 100%;
             position: fixed;
@@ -57,11 +60,13 @@
             transition: transform 250ms ease-in-out;
             background: linear-gradient(180deg, #5f1a7c 0%, #3F5EFB 100%);
         }
+
         .sidebarMenuInner {
             margin: 0;
             padding: 0;
             border-top: 1px solid rgba(255, 255, 255, 0.10);
         }
+
         .sidebarMenuInner li {
             list-style: none;
             color: #fff;
@@ -71,11 +76,13 @@
             cursor: pointer;
             border-bottom: 1px solid rgba(255, 255, 255, 0.10);
         }
+
         .sidebarMenuInner li span {
             display: block;
             font-size: 14px;
             color: rgba(255, 255, 255, 0.50);
         }
+
         .sidebarMenuInner li a {
             color: #fff;
             text-transform: uppercase;
@@ -83,14 +90,17 @@
             cursor: pointer;
             text-decoration: none;
         }
+
         input[type="checkbox"]:checked~#sidebarMenu {
             transform: translateX(0);
         }
+
         input[type=checkbox] {
             transition: all 0.3s;
             box-sizing: border-box;
             display: none;
         }
+
         .sidebarIconToggle {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -104,6 +114,7 @@
             height: 22px;
             width: 22px;
         }
+
         .spinner {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -113,6 +124,7 @@
             background-color: #fff;
             margin: 2px 0;
         }
+
         /* .horizontal, .diagonal.part-1, .diagonal.part-2 {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -150,31 +162,146 @@
             transform: rotate(-135deg);
             margin-top: -9px;
         } */
+
+        .social-media {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .social {
+            display: flex;
+            position: relative;
+            padding: 0;
+            margin-top: 20px;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .social li {
+            list-style: none;
+        }
+
+        .social li a {
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 80px;
+            font-size: 35px;
+            margin: 0 10px;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+
+        }
+
+        ul li a .icon {
+            position: relative;
+            color: #262626;
+            transition: .5s;
+            z-index: 3;
+        }
+
+        ul li a:hover .icon {
+            color: #fff;
+            transform: rotateY(360deg);
+        }
+
+        .social li a:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f00;
+            transition: .5s;
+            z-index: 2;
+        }
+
+        .social li a:hover:before {
+            top: 0;
+        }
+
+        .social li:nth-child(1) a:before {
+            background: #d62976;
+        }
+
+        .social li:nth-child(2) a:before {
+            background: #171515;
+        }
+
+        .social li:nth-child(3) a:before {
+            background: #0077b5;
+        }
     </style>
 </head>
 
 <body>
     <div class="header"></div>
+
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+
     <label for="openSidebarMenu" class="sidebarIconToggle">
         <div class="spinner diagonal part-1"></div>
         <div class="spinner horizontal"></div>
         <div class="spinner diagonal part-2"></div>
     </label>
+
     <div id="sidebarMenu">
         <ul class="sidebarMenuInner">
             <li>Simone Arcari <span>Control engineer</span></li>
-            <li><a href="#" >about me</a></li>
-            <li><a href="#" >Instagram</a></li>
-            <li><a href="#" >github</a></li>
-            <li><a href="#" >Linkedin</a></li>
+            <li><a href="#">about me</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">github</a></li>
+            <li><a href="#">Linkedin</a></li>
         </ul>
     </div>
+
     <div id='center' class="main center">
         <div class="mainInner">
-            <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+
+            <div class="prova">
+                <p>Ciao a tutti, mi chiamo Simone, sono un ingegnere e sto creando il mio sito personale :)</p>
+                <br>
+                <p>Hi everybody, my name is Simone, I'm an engineer and I'm developing my personal website :)</p>
+            </div>
+
+            <div class="social-media">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+                    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+                    crossorigin="anonymous">
+
+                <ul class="social">
+                    <li>
+                        <a href="#" id="instagram">
+                            <i class="fab fa-instagram icon"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="github">
+                            <i class="fab fa-github icon"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="linkedin">
+                            <i class="fab fa-linkedin-in icon"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,49 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
-
-
+html,
 body {
+    overflow-x: hidden;
+    height: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.header {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    box-shadow: none;
+    background-color: #FF7A00;
+    position: fixed;
+    
+    overflow: hidden;
+    z-index: 10;
+}
+
+#header-text {
+    margin: 0;
+    font-size: 30px;
+}
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg,#FF7A00 10%, #b6a265  100%);
+    z-index: 4;
+}
+
+.sidebarMenuInner {
     margin: 0;
     padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li {
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="checkbox"]:checked~#sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 15px;
+    height: 25px;
+    width: 30px;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    height: 5px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.main-center {
     background: #262626;
-}
-
-header {
-    color: #FF4C29;
+    height: 100%;
+    width: 100%;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    background-color: #1F1B24;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-}
-
-footer {
-    background-color: #1F1B24;
-    height: 50px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-p {
+    font-size: 15px;
+    font-weight: bold;
     color: white;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-}
-
-#text {
-    margin: 0;
 }
 
 .prova {
     text-align: center;
     font-size: 25px;
     padding: 30px;
+}
+ .diagonal.part-1, .horizontal, .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+}
+
+.horizontal, .diagonal.part-2{
+    margin-top: 5px;
 }
 
 .social-media {
@@ -52,7 +136,7 @@ p {
     padding: 0;
 }
 
-ul {
+.social {
     display: flex;
     position: relative;
     padding: 0;
@@ -62,11 +146,11 @@ ul {
     transform: translate(-50%, 0%);
 }
 
-ul li{
+.social li {
     list-style: none;
 }
 
-ul li a{
+.social li a {
     width: 80px;
     height: 80px;
     background-color: #fff;
@@ -94,7 +178,7 @@ ul li a:hover .icon {
     transform: rotateY(360deg);
 }
 
-ul li a:before {
+.social li a:before {
     content: "";
     position: absolute;
     top: 100%;
@@ -106,18 +190,18 @@ ul li a:before {
     z-index: 2;
 }
 
-ul li a:hover:before {
+.social li a:hover:before {
     top: 0;
 }
 
-ul li:nth-child(1) a:before {
-    background: #d62976;
+.social li:nth-child(1) a:before {
+    background: linear-gradient(180deg, #5f1a7c 0%, #FF4C29 100%);
 }
 
-ul li:nth-child(2) a:before {
+.social li:nth-child(2) a:before {
     background: #171515;
 }
 
-ul li:nth-child(3) a:before {
+.social li:nth-child(3) a:before {
     background: #0077b5;
 }

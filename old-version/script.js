@@ -1,14 +1,14 @@
 var writeTextEvent = new Event('writeText');
 
-var textEl = document.getElementById('header-text');
+var textEl = document.getElementById('text');
 var instagramEl = document.getElementById('instagram');
 var githubEl = document.getElementById('github');
 var linkedinEl = document.getElementById('linkedin');
 
 
 console.log(instagramEl);
-var text = 'Simone Arcari - Computer Science/Automation Control Engineer';
-//var text = 'Simone Arcari';
+//var text = 'Simone Arcari - Computer Science/Automation Control Engineer';
+var text = 'Simone Arcari';
 var idx = 1;
 var speed = 300 / 6;
 
@@ -36,14 +36,11 @@ writeText();
 function setNextElementMarginTop() {
 
     // ottiene altezza effettiva header
-    var header = document.querySelector('.header');
+    var header = document.querySelector('header');
     var headerHeight = header.offsetHeight;
 
     // imposta il valore del margin-top di prova
-    var nextElement = document.querySelector('#sidebarMenu');
-    nextElement.style.marginTop = headerHeight + 'px';
-
-    var nextElement = document.querySelector('.main-center');
+    var nextElement = document.querySelector('.prova');
     nextElement.style.marginTop = headerHeight + 'px';
 }
 
