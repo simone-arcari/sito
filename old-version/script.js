@@ -1,7 +1,7 @@
 var writeTextEvent = new Event('writeText');
 
 var textEl = document.getElementById('text');
-var instagramEl = document.getElementById('instagram');
+var instagramEl = document.getElementsByClassName('instagram');
 var githubEl = document.getElementById('github');
 var linkedinEl = document.getElementById('linkedin');
 

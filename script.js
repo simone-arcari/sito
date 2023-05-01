@@ -1,9 +1,14 @@
 var writeTextEvent = new Event('writeText');
 
 var textEl = document.getElementById('header-text');
+
 var instagramEl = document.getElementById('instagram');
 var githubEl = document.getElementById('github');
 var linkedinEl = document.getElementById('linkedin');
+
+var instagramSideBarEl = document.getElementById('instagramSideBar');
+var githubSideBarEl = document.getElementById('githubSideBar');
+var linkedinSideBarEl = document.getElementById('linkedinSideBar');
 
 
 console.log(instagramEl);
@@ -70,3 +75,16 @@ githubEl.addEventListener('click', function() {
 linkedinEl.addEventListener('click', function() {
     window.open("https://www.linkedin.com/in/simone-arcari-14319b25b/", '_blank');
 })
+
+instagramSideBarEl.addEventListener('click', function() {
+    window.open("https://www.instagram.com/simone_arcari/", '_blank');
+})
+
+githubSideBarEl.addEventListener('click', function() {
+    window.open("https://github.com/simone-arcari", '_blank');
+})
+
+linkedinSideBarEl.addEventListener('click', function() {
+    window.open("https://www.linkedin.com/in/simone-arcari-14319b25b/", '_blank');
+})
+
