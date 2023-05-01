@@ -2,6 +2,8 @@
 var writeTextEvent = new Event('writeText');
 
 // Elementi
+var iconTheme = document.getElementById('icon-theme');
+
 var instagramEl = document.getElementById('instagram');
 var githubEl = document.getElementById('github');
 var linkedinEl = document.getElementById('linkedin');
@@ -47,6 +49,17 @@ window.addEventListener('resize', function () {
 
 
 writeHeaderText();
+
+// selezione dark theme
+iconTheme.onclick = function() {
+    document.body.classList.toggle("dark-theme");
+
+    if(document.body.classList.contains("dark-theme")) {
+        iconTheme.src = "img/sun.png";
+    }else {
+        iconTheme.src = "img/moon.png";
+    }
+}
 
 
 // Imposta il valore del margin-top dell'elemento subito sotto l'header
