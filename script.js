@@ -7,7 +7,8 @@ var linkedinEl = document.getElementById('linkedin');
 
 
 console.log(instagramEl);
-var text = 'Simone Arcari - Computer Science/Automation Control Engineer';
+//var text = 'Simone Arcari - Computer Science/Automation Control Engineer';
+var text = 'Simone Arcari | Automation Control Engineer';
 //var text = 'Simone Arcari';
 var idx = 1;
 var speed = 300 / 6;
