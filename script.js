@@ -1,7 +1,7 @@
+// Evento di scrittura tramite funzione writeText()
 var writeTextEvent = new Event('writeText');
 
-var textEl = document.getElementById('header-text');
-
+// Elementi
 var instagramEl = document.getElementById('instagram');
 var githubEl = document.getElementById('github');
 var linkedinEl = document.getElementById('linkedin');
@@ -10,60 +10,96 @@ var instagramSideBarEl = document.getElementById('instagramSideBar');
 var githubSideBarEl = document.getElementById('githubSideBar');
 var linkedinSideBarEl = document.getElementById('linkedinSideBar');
 
+var textHeaderEl = document.getElementById('header-text');
 
-console.log(instagramEl);
-//var text = 'Simone Arcari - Computer Science/Automation Control Engineer';
-var text = 'Simone Arcari | Automation Control Engineer';
-//var text = 'Simone Arcari';
+// Variabili ausiliare per la funzione writeText()
+var longerHeaderText = 'Simone Arcari - Computer Science/Automation Control Engineer';
+var longHeaderText = 'Simone Arcari | Automation Control Engineer';
+var shortHeaderText = 'Simone Arcari';
 var idx = 1;
 var speed = 300 / 6;
 
 
+                        /* HANDLER */
+
 // Esegui il codice JavaScript quando la funzione writeText() termina il suo compito
 document.addEventListener('writeText', function () {
-    setNextElementMarginTop();
+    setMyElementMarginTop();
 });
 
 // Esegui il codice JavaScript quando la pagina è stata caricata
 document.addEventListener('DOMContentLoaded', function () {
-    setNextElementMarginTop();
+    setMyElementMarginTop();
 });
 
 // Esegui il codice JavaScript quando la finestra del browser viene ridimensionata
 window.addEventListener('resize', function () {
-    setNextElementMarginTop();
+    setMyElementMarginTop();
+});
+
+// Esegui il codice JavaScript quando la finestra del browser viene ridimensionata
+window.addEventListener('resize', function () {
+    changeHeaderText();
 });
 
 
-writeText();
+writeHeaderText();
 
 
 // Imposta il valore del margin-top dell'elemento subito sotto l'header
-function setNextElementMarginTop() {
+function setMyElementMarginTop() {
 
     // ottiene altezza effettiva header
     var header = document.querySelector('.header');
     var headerHeight = header.offsetHeight;
 
-    // imposta il valore del margin-top di prova
+    // imposta il valore del margin-top di #sidebarMenu
     var nextElement = document.querySelector('#sidebarMenu');
     nextElement.style.marginTop = headerHeight + 'px';
 
+    // imposta il valore del margin-top di .main-center
     var nextElement = document.querySelector('.main-center');
     nextElement.style.marginTop = headerHeight + 'px';
 }
 
-// Scrive un po' alla volta la classe 'text'
-function writeText() {
-    textEl.innerText = text.slice(0, idx);
+// Scrive un po' alla volta l' header text
+function writeHeaderText() {
+    let currentText = longerHeaderText;
+
+    if(textHeaderEl.offsetWidth <= 737) {   // se la largezza (che dipende dal dispositivo) è piccola -> testo medio
+        currentText = longHeaderText;
+    }
+
+    if(textHeaderEl.offsetWidth <= 538) {   // se la largezza (che dipende dal dispositivo) è troppo piccola -> testo corto
+        currentText = shortHeaderText;
+    }
+
+    textHeaderEl.innerText = currentText.slice(0, idx);
     idx++;
-    if (idx <= text.length) {
-        setTimeout(writeText, speed);
+    if (idx <= currentText.length) {
+        setTimeout(writeHeaderText, speed);
         document.dispatchEvent(writeTextEvent);
+    }else {
+        idx = 1;
     }
 }
 
-// Link cliccabili
+// cambia il testo nella barra (in alto)
+function changeHeaderText() {
+    let currentText = longerHeaderText;
+
+    if(textHeaderEl.offsetWidth <= 737) {   // se la largezza (che dipende dal dispositivo) è piccola -> testo medio
+        currentText = longHeaderText;
+    }
+
+    if(textHeaderEl.offsetWidth <= 538) {   // se la largezza (che dipende dal dispositivo) è troppo piccolo -> testo corto
+        currentText = shortHeaderText;
+    }
+
+    textHeaderEl.innerText = currentText;
+}
+
+// Link cliccabili (tasti tondi)
 instagramEl.addEventListener('click', function() {
     window.open("https://www.instagram.com/simone_arcari/", '_blank');
 })
@@ -76,6 +112,7 @@ linkedinEl.addEventListener('click', function() {
     window.open("https://www.linkedin.com/in/simone-arcari-14319b25b/", '_blank');
 })
 
+// Link cliccabili (tasti menu bar)
 instagramSideBarEl.addEventListener('click', function() {
     window.open("https://www.instagram.com/simone_arcari/", '_blank');
 })

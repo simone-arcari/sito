@@ -27,8 +27,8 @@ body {
 
 #header-text {
     margin: 0;
-    margin-left: 65px;
-    font-size: 40px;
+    margin-left: 61px;
+    font-size: 41px;
 }
 
 #sidebarMenu {
@@ -84,6 +84,7 @@ input[type=checkbox] {
 
 .sidebarIconToggle {
     transition: all 0.3s;
+    position: fixed;
     box-sizing: border-box;
     cursor: pointer;
     position: absolute;
@@ -169,7 +170,6 @@ input[type=checkbox] {
     position: relative;
     overflow: hidden;
     z-index: 1;
-
 }
 
 ul li a .icon {
@@ -201,7 +201,8 @@ ul li a:hover .icon {
 }
 
 .social li:nth-child(1) a:before {
-    background: linear-gradient(180deg, #5f1a7c 0%, #FF4C29 100%);
+    background: linear-gradient(180deg, #7c1a5d 0%, #FF4C29 100%);
+    
 }
 
 .social li:nth-child(2) a:before {
