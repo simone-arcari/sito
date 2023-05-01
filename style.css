@@ -5,7 +5,7 @@ body {
     overflow-x: hidden;
     height: 100%;
     box-sizing: border-box;
-    background: #fff;
+    background: #262626;
     padding: 0;
     margin: 0;
     font-family: 'Varela Round', sans-serif;
@@ -20,7 +20,7 @@ body {
     box-shadow: none;
     background-color: #277DFF;
     position: fixed;
-    
+    min-height: 50px;
     overflow: hidden;
     z-index: 10;
 }
@@ -38,7 +38,7 @@ body {
     width: 250px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, #277DFF 10%, #d20f0f  100%);
+    background: linear-gradient(180deg, #277DFF 10%, #d9e2eb  100%);
     z-index: 4;
 }
 
@@ -104,6 +104,7 @@ input[type=checkbox] {
     height: 5px;
     width: 100%;
     background-color: #fff;
+    
 }
 
  .diagonal.part-1, .horizontal, .diagonal.part-2 {
@@ -201,7 +202,7 @@ ul li a:hover .icon {
 }
 
 .social li:nth-child(1) a:before {
-    background: linear-gradient(180deg, #7c1a5d 0%, #FF4C29 100%);
+    background: linear-gradient(45deg, #FEDA75 , #FA7E1E, #D62976, #962FBF, #4F5BD5 );
     
 }
 

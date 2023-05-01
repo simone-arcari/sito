@@ -13,11 +13,14 @@ var linkedinSideBarEl = document.getElementById('linkedinSideBar');
 var textHeaderEl = document.getElementById('header-text');
 
 // Variabili ausiliare per la funzione writeText()
-var longerHeaderText = 'Simone Arcari - Computer Science/Automation Control Engineer';
-var longHeaderText = 'Simone Arcari | Automation Control Engineer';
+var longHeaderText = 'Simone Arcari - Computer Science/Automation Control Engineer';
+var middleHeaderText = 'Simone Arcari | Automation Control Engineer';
 var shortHeaderText = 'Simone Arcari';
 var idx = 1;
 var speed = 300 / 6;
+var minWidth_longText = 1400;
+var minWidth_middleText = 1000;
+var minWidth_shortText = 350;
 
 
                         /* HANDLER */
@@ -64,14 +67,18 @@ function setMyElementMarginTop() {
 
 // Scrive un po' alla volta l' header text
 function writeHeaderText() {
-    let currentText = longerHeaderText;
+    let currentText = longHeaderText;
 
-    if(textHeaderEl.offsetWidth <= 737) {   // se la largezza (che dipende dal dispositivo) è piccola -> testo medio
-        currentText = longHeaderText;
+    if(textHeaderEl.offsetWidth <= minWidth_longText) {   // se la largezza (che dipende dal dispositivo) è piccola -> testo medio
+        currentText = middleHeaderText;
     }
 
-    if(textHeaderEl.offsetWidth <= 538) {   // se la largezza (che dipende dal dispositivo) è troppo piccola -> testo corto
+    if(textHeaderEl.offsetWidth <= minWidth_middleText) {   // se la largezza (che dipende dal dispositivo) è troppo piccola -> testo corto
         currentText = shortHeaderText;
+    }
+
+    if(textHeaderEl.offsetWidth <= minWidth_shortText) {   // se la largezza (che dipende dal dispositivo) è estremamente piccola -> testo nullo
+        currentText = '';
     }
 
     textHeaderEl.innerText = currentText.slice(0, idx);
@@ -86,14 +93,18 @@ function writeHeaderText() {
 
 // cambia il testo nella barra (in alto)
 function changeHeaderText() {
-    let currentText = longerHeaderText;
+    let currentText = longHeaderText;
 
-    if(textHeaderEl.offsetWidth <= 737) {   // se la largezza (che dipende dal dispositivo) è piccola -> testo medio
-        currentText = longHeaderText;
+    if(textHeaderEl.offsetWidth <= minWidth_longText ) {   // se la largezza (che dipende dal dispositivo) è piccola -> testo medio
+        currentText = middleHeaderText;
     }
 
-    if(textHeaderEl.offsetWidth <= 538) {   // se la largezza (che dipende dal dispositivo) è troppo piccolo -> testo corto
+    if(textHeaderEl.offsetWidth <= minWidth_middleText) {   // se la largezza (che dipende dal dispositivo) è troppo piccola -> testo corto
         currentText = shortHeaderText;
+    }
+
+    if(textHeaderEl.offsetWidth <= minWidth_shortText) {   // se la largezza (che dipende dal dispositivo) è estremamente piccola -> testo nullo
+        currentText = '';
     }
 
     textHeaderEl.innerText = currentText;
