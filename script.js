@@ -2,7 +2,7 @@
 var writeTextEvent = new Event('writeText');
 
 // Elementi
-var iconTheme = document.getElementById('icon-theme');
+var iconTheme = document.getElementById('iconThemeSelector');
 
 var instagramEl = document.getElementById('instagram');
 var githubEl = document.getElementById('github');
@@ -66,7 +66,7 @@ iconTheme.onclick = function() {
 function setMyElementMarginTop() {
 
     // ottiene altezza effettiva header
-    var header = document.querySelector('.header');
+    var header = document.querySelector('.headerBar');
     var headerHeight = header.offsetHeight;
 
     // imposta il valore del margin-top di #sidebarMenu
