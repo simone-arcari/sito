@@ -11,6 +11,8 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif; /* font sito apple */
+    font-weight: bold;                            /* imposta il grassetto normale */
+
 }
 
 .headerBar {
@@ -61,6 +63,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 18px;
     padding: 20px;
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
@@ -136,7 +139,6 @@ input[type=checkbox] {
     width: 100%;
     text-align: center;
     font-size: 15px;
-    font-weight: bold;
     color: var(--secondary-color);
 }
 
@@ -150,25 +152,15 @@ input[type=checkbox] {
     --secondary-color: white;
 }
 
-.prova {
-    text-align: center;
-    font-size: 20px;
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
 .container {
     text-align: center;
     font-size: 20px;
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
     margin: 20px;
-
-    border-radius: 10px;    /* per rendere i bordi tondi */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* aggiungere un'ombra di 10 pixel di spessore con opacità 0.3 */
-    transition: box-shadow 0.3s ease-in-out; /* aggiungere una transizione per l'ombra */
+    font-weight: bold;                            /* imposta il grassetto normale */
+    border-radius: 10px;                          /* per rendere i bordi tondi */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);    /* aggiungere un'ombra di 10 pixel di spessore con opacità 0.3 */
+    transition: box-shadow 0.3s ease-in-out;      /* aggiungere una transizione per l'ombra */
     padding: 20px;
     background-color: white;
     display: inline-block;
@@ -176,7 +168,7 @@ input[type=checkbox] {
 }
 
 .container:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* aumentare l'ombra a 20 pixel di spessore con opacità 0.6 quando il mouse ci passa sopra */
 }
 
@@ -184,6 +176,14 @@ input[type=checkbox] {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.container .title {
+    -webkit-text-stroke: 2px black; /* imposta un bordo nero intorno al testo */
+    font-size: 35px;
+    padding: 0;
+    margin: 0;
+    
 }
 
 .social-media {
