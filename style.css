@@ -141,7 +141,7 @@ input[type=checkbox] {
 }
 
 :root {
-    --primary-color: white;
+    --primary-color: #f5f5f7;
     --secondary-color: black;
 }
 
@@ -156,6 +156,34 @@ input[type=checkbox] {
     padding-top: 5px;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.container {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px;
+
+    border-radius: 10px;    /* per rendere i bordi tondi */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* aggiungere un'ombra di 10 pixel di spessore con opacità 0.3 */
+    transition: box-shadow 0.3s ease-in-out; /* aggiungere una transizione per l'ombra */
+    padding: 20px;
+    background-color: white;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* aumentare l'ombra a 20 pixel di spessore con opacità 0.6 quando il mouse ci passa sopra */
+}
+
+.container-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .social-media {
