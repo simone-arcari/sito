@@ -247,9 +247,9 @@ ul li a:hover .icon {
     top: 0;
 }
 
+
 .social li:nth-child(1) a:before {
-    background: linear-gradient(45deg, #FEDA75 , #FA7E1E, #D62976, #962FBF, #4F5BD5 );
-    
+    background: #0077b5;
 }
 
 .social li:nth-child(2) a:before {
@@ -257,5 +257,10 @@ ul li a:hover .icon {
 }
 
 .social li:nth-child(3) a:before {
-    background: #0077b5;
+    background: #c4302b; 
+}
+
+.social li:nth-child(4) a:before {
+    background: linear-gradient(45deg, #FEDA75 , #FA7E1E, #D62976, #962FBF, #4F5BD5 );
+    
 }
