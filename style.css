@@ -151,9 +151,13 @@ input[type=checkbox] {
 }
 
 .container-group {
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;*/
+
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .container {
@@ -168,6 +172,8 @@ input[type=checkbox] {
     background-color: var(--container-color);
     display: inline-block;
     transition: transform 0.2s;
+
+    align-items: center;
 }
 
 .container:hover {
@@ -181,6 +187,15 @@ input[type=checkbox] {
     padding: 0;
     margin: 0;
     
+}
+
+
+
+#languages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
 }
 
 /* <!-- tasti canali social --> */
