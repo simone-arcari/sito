@@ -106,7 +106,7 @@ input[type=checkbox] {
     width: 250px;   
     transform: translateX(-250px);                                              /* sposta l'elemento di -250px lungo l'asse X (ovvero verso sinistra) utilizzando la funzione CSS "translateX" */
     transition: transform 250ms ease-in-out;                                    /*  definisce l'effetto di transizione che viene applicato quando l'elemento cambia di stato (ad esempio quando viene aperto o chiuso) */
-    background: linear-gradient(180deg, #277DFF 10%, #d9e2eb  100%);
+    background: linear-gradient(180deg, #277DFF 10%, var(--background-color)  100%);
     z-index: 4;
 }
 
