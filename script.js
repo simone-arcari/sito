@@ -159,6 +159,3 @@ youtubeSideBarEl.addEventListener('click', function() {
 instagramSideBarEl.addEventListener('click', function() {
     window.open("https://www.instagram.com/simone_arcari/", '_blank');
 })
-
-
-
