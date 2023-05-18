@@ -9,9 +9,10 @@ var githubEl = document.getElementById('github');
 var youtubeEl = document.getElementById('youtube');
 var instagramEl = document.getElementById('instagram');
 
-var instagramSideBarEl = document.getElementById('instagramSideBar');
-var githubSideBarEl = document.getElementById('githubSideBar');
 var linkedinSideBarEl = document.getElementById('linkedinSideBar');
+var githubSideBarEl = document.getElementById('githubSideBar');
+var youtubeSideBarEl = document.getElementById('youtubeSideBar');
+var instagramSideBarEl = document.getElementById('instagramSideBar');
 
 var textHeaderEl = document.getElementById('header-text');
 
@@ -144,15 +145,20 @@ instagramEl.addEventListener('click', function() {
 
 
 // Link cliccabili (tasti menu bar)
-instagramSideBarEl.addEventListener('click', function() {
-    window.open("https://www.instagram.com/simone_arcari/", '_blank');
+linkedinSideBarEl.addEventListener('click', function() {
+    window.open("https://www.linkedin.com/in/simone-arcari-14319b25b/", '_blank');
 })
 
 githubSideBarEl.addEventListener('click', function() {
     window.open("https://github.com/simone-arcari", '_blank');
 })
-
-linkedinSideBarEl.addEventListener('click', function() {
-    window.open("https://www.linkedin.com/in/simone-arcari-14319b25b/", '_blank');
+youtubeSideBarEl.addEventListener('click', function() {
+    window.open("https://www.youtube.com/channel/UCRFpI_W660ps-DDMBMKz83A", '_blank');
 })
+
+instagramSideBarEl.addEventListener('click', function() {
+    window.open("https://www.instagram.com/simone_arcari/", '_blank');
+})
+
+
 

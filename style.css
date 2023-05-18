@@ -127,6 +127,10 @@ input[type=checkbox] {
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
+.sidebarItem:hover {
+    background: #171515;
+}
+
 .sidebarMenuInner li span {
     display: block;
     font-size: 14px;
