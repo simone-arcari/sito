@@ -161,6 +161,8 @@ input[type=checkbox] {
     justify-content: center;*/
 
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -176,7 +178,7 @@ input[type=checkbox] {
     background-color: var(--container-color);
     display: inline-block;
     transition: transform 0.2s;
-
+    width: 800px;
     align-items: center;
 }
 
@@ -200,6 +202,10 @@ input[type=checkbox] {
     flex-direction: column;
     align-items: center;
     text-align: left;
+}
+
+.moreText {
+    display: none;
 }
 
 /* <!-- tasti canali social --> */
