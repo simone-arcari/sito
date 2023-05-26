@@ -178,7 +178,8 @@ input[type=checkbox] {
     background-color: var(--container-color);
     display: inline-block;
     transition: transform 0.2s;
-    width: 800px;
+    width: 700px;
+    max-width: 800px;
     align-items: center;
 }
 
