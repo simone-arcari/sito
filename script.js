@@ -173,7 +173,7 @@ function moreText(buttonId) {
 
     if (moreTextEl.style.display == "none") {
         moreTextEl.style.display = "inline";
-        moreTextButtonEl.innerHTML = "Read less";
+        moreTextButtonEl.innerHTML = "Close";
     }
     else {
         moreTextEl.style.display = "none";
