@@ -19,12 +19,14 @@ body {
     --background-color: #f5f5f7;
     --container-color: white;
     --text-color: black;
+    --headerBar-color: #277DFF;
 }
 
 .dark-theme {
     --background-color: #262626;
     --container-color: #424242;
     --text-color: white;
+    --headerBar-color: #031b3d;
 }
 
 /* <!-- barra intestazione della pagina --> */
@@ -33,7 +35,7 @@ body {
     margin: 0 auto;             /* imposta i margini della barra dell'intestazione a 0 sui lati sinistro e destro e centra l'elemento orizzontalmente */
     width: 100%;                /* la barra occuperà tutto lo spazio orizzontale disponibile*/ 
     text-align: center;     
-    background-color: #277DFF;  
+    background-color: var(--headerBar-color);  
     position: fixed;            /* imposta la posizione della barra dell'intestazione come fissa nella finestra del browser, il che significa che non si sposterà quando l'utente scorrerà la pagina */
     overflow: hidden;           /* nasconde qualsiasi contenuto che fuoriesce dalla barra dell'intestazione */
     z-index: 10;                /* imposta lo z-index della barra dell'intestazione a 10, il che significa che sarà visualizzata sopra altri elementi con uno z-index inferiore */
@@ -106,7 +108,7 @@ input[type=checkbox] {
     width: 250px;   
     transform: translateX(-250px);                                              /* sposta l'elemento di -250px lungo l'asse X (ovvero verso sinistra) utilizzando la funzione CSS "translateX" */
     transition: transform 250ms ease-in-out;                                    /*  definisce l'effetto di transizione che viene applicato quando l'elemento cambia di stato (ad esempio quando viene aperto o chiuso) */
-    background: linear-gradient(180deg, #277DFF 10%, var(--background-color)  100%);
+    background: linear-gradient(180deg, var(--headerBar-color) 10%, var(--background-color)  100%);
     z-index: 4;
 }
 
@@ -198,7 +200,7 @@ input[type=checkbox] {
 
 
 
-#languages {
+#list-image {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -2,7 +2,7 @@
 var writeTextEvent = new Event('writeText');
 
 // Elementi
-var iconThemeEl = document.getElementById('iconThemeSelector');
+var iconTheme = document.getElementById('iconThemeSelector');
 
 var linkedinEl = document.getElementById('linkedin');
 var githubEl = document.getElementById('github');
@@ -14,7 +14,6 @@ var githubSideBarEl = document.getElementById('githubSideBar');
 var youtubeSideBarEl = document.getElementById('youtubeSideBar');
 var instagramSideBarEl = document.getElementById('instagramSideBar');
 var ripetizioniSideBarEl = document.getElementById('ripetizioniSideBar');
-var homeSideBarEl = document.getElementById('homeSideBar');
 
 var textHeaderEl = document.getElementById('header-text');
 
@@ -29,18 +28,10 @@ var minWidth_middleText = 800;
 var minWidth_shortText = 300;
 var criticalWidth = 890;    // ricorda che i paramentri di .container sono {width: 700px, max-width: 800px}
 
-
-
-
-/***************************************** MAIN *****************************************/
-
 writeHeaderText();
 changeContainerWidth()
 
-
-
-
-/***************************************** HANDLER *****************************************/
+/* HANDLER */
 
 // Esegui il codice JavaScript quando la funzione writeText() termina il suo compito
 document.addEventListener('writeText', function () {
@@ -69,9 +60,16 @@ window.addEventListener('resize', function () {
 
 
 
+// selezione dark theme
+iconTheme.onclick = function () {
+    document.body.classList.toggle("dark-theme");
 
-
-/***************************************** FUNCTIONS *****************************************/
+    if (document.body.classList.contains("dark-theme")) {
+        iconTheme.src = "img/sun.png";
+    } else {
+        iconTheme.src = "img/moon.png";
+    }
+}
 
 // Imposta il valore del margin-top dell'elemento subito sotto l'header
 function setMyElementMarginTop() {
@@ -89,7 +87,7 @@ function setMyElementMarginTop() {
     nextElement.style.marginTop = headerHeight + 'px';
 }
 
-// Scrive un po' alla volta l' header text
+// Scrive un po' alla volta l' head6er text
 function writeHeaderText() {
     let currentText = longHeaderText;
 
@@ -161,12 +159,8 @@ function moreText(buttonId) {
             moreTextId = "moreTextAboutMe";
             break;
 
-        case "moreTextButtonInformatica":
-            moreTextId = "moreTextInformatica";
-            break;
-        
-        case "moreTextButtonRobotica":
-            moreTextId = "moreTextRobotica";
+        case "orange":
+            console.log("Selected fruit is an orange.");
             break;
 
         default:
@@ -176,76 +170,57 @@ function moreText(buttonId) {
 
     let moreTextEl = document.getElementById(moreTextId);
     let moreTextButtonEl = document.getElementById(buttonId);
-    let computedStyle = window.getComputedStyle(moreTextEl);
 
-    if (computedStyle.display === "none") {
+    if (moreTextEl.style.display == "none") {
         moreTextEl.style.display = "inline";
         moreTextButtonEl.innerHTML = "Close";
-        console.log("PROVA PROVA....");
     }
     else {
         moreTextEl.style.display = "none";
         moreTextButtonEl.innerHTML = "Read more";
-        console.log("problema....");
     }
 }
 
 
-
-
-/***************************************** CLICKS *****************************************/
-
-// selezione dark theme
-iconThemeEl.onclick = function () {
-    document.body.classList.toggle("dark-theme");
-
-    if (document.body.classList.contains("dark-theme")) {
-        iconThemeEl.src = "img/sun.png";
-    } else {
-        iconThemeEl.src = "img/moon.png";
-    }
-}
 
 // Link cliccabili (tasti menu bar)
-linkedinSideBarEl.onclick = function () {
+linkedinSideBarEl.addEventListener('click', function () {
     window.open("https://www.linkedin.com/in/simone-arcari-14319b25b/", '_blank');
-}
+})
 
-githubSideBarEl.onclick = function () {
+githubSideBarEl.addEventListener('click', function () {
     window.open("https://github.com/simone-arcari", '_blank');
-}
-
-youtubeSideBarEl.onclick = function () {
+})
+youtubeSideBarEl.addEventListener('click', function () {
     window.open("https://www.youtube.com/channel/UCRFpI_W660ps-DDMBMKz83A", '_blank');
-}
+})
 
-instagramSideBarEl.onclick = function () {
+instagramSideBarEl.addEventListener('click', function () {
     window.open("https://www.instagram.com/simone_arcari/", '_blank');
-}
+})
 
-ripetizioniSideBarEl.onclick = function () {
-    window.open("ripetizioni.html");
-}
+ripetizioniSideBarEl.addEventListener('click', function () {
+    window.open("ripetizioni.html", '_blank');
+})
 
-homeSideBarEl.onclick = function () {
-    window.open("index.html");
-}
+
 
 // Link cliccabili (tasti tondi)
 linkedinEl.addEventListener('click', function () {
     window.open("https://www.linkedin.com/in/simone-arcari-14319b25b/", '_blank');
-});
+})
 
 githubEl.addEventListener('click', function () {
     window.open("https://github.com/simone-arcari", '_blank');
-});
+})
 
 youtubeEl.addEventListener('click', function () {
     window.open("https://www.youtube.com/channel/UCRFpI_W660ps-DDMBMKz83A", '_blank');
-});
+})
 
 instagramEl.addEventListener('click', function () {
     window.open("https://www.instagram.com/simone_arcari/", '_blank');
-});
+})
+
 
 
